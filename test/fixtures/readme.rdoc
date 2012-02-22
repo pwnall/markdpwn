@@ -1,4 +1,4 @@
-h2. List
+== List
 
 * Eggs
 * Ham

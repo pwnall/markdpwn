@@ -12,13 +12,21 @@ surprises.
 
 ## Dependencies
 
-The `pygments.rb` gem requires the Python VM libraries. They are installed by
-default on OSX and Ubuntu. The following command installs them on Fedora.
+The `pygments.rb` gem requires the Python VM library and the `pygments` package.
+They are installed by default on OSX and Ubuntu. The following command installs
+them on Fedora.
 
 ```bash
-sudo yum install -y python-devel
+sudo yum install -y python-devel python-pygments
 ``` 
 
+The `github-markup` gem requires `asciidoc`, PERL together with the
+`Pod::Simple` library, and Python together with the `rst2html` tool. The
+following command installs them on Fedora. 
+
+```bash
+sudo yum install -y asciidoc perl-Pod-Simple python-docutils
+```
 
 
 ## Contributing to markdpwn
@@ -39,4 +47,3 @@ sudo yum install -y python-devel
 ## Copyright
 
 Copyright (c) 2012 Victor Costan. See LICENSE.txt for further details.
-
