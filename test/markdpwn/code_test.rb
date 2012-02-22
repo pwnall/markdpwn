@@ -5,7 +5,7 @@ describe Markdpwn::Code do
     describe 'with view.html.erb' do
       let :result do
         Markdpwn::Code.render code_fixture('view.html.erb'),
-            :file_name => 'view.html.erb'
+                              :file_name => 'view.html.erb'
       end
       
       it 'is wrapped in a <div> with the markdpwn-parsed-code class' do
@@ -44,7 +44,7 @@ describe Markdpwn::Code do
     describe 'with view.html.erb' do
       let :result do
         Markdpwn::Code.pygment code_fixture('view.html.erb'),
-            :file_name => 'view.html.erb' 
+                               :file_name => 'view.html.erb' 
       end
       
       it 'includes a parsed <h1> tag' do

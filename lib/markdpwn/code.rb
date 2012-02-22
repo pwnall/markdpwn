@@ -8,13 +8,13 @@ module Code
   #
   # @param [String] code the code to be formatted
   # @param [Hash] options code properties that help choose the formatter
-  # @option options [String] :language the name of the code's language; GFM code
-  #     blocks can include a language name
   # @option options [String] :mime_type the MIME type of the code file; e-mail
   #     attachments and git blobs have MIME types
   # @option options [String] :file_name the name of the file containing the
   #     piece of code; meaningful for files in version control repositories,
   #     e-mail attachments, and code fetched from links
+  # @option options [String] :language the name of the code's language; GFM code
+  #     blocks can include a language name
   # @return [String] a HTML fragment containing the formatted code
   def self.render(code, options = {})
     [

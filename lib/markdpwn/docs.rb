@@ -12,6 +12,7 @@ module Markdpwn
 module Docs
   # The raw GitHub::Markup output for parsing a text document.
   #
+  # @param [Hash] options code properties that help choose the formatter
   # @option options [String] :mime_type the MIME type of the code file; e-mail
   #     attachments and git blobs have MIME types
   # @option options [String] :file_name the name of the file containing the

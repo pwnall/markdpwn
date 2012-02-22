@@ -9,6 +9,33 @@ Rails engine providing a clone of Git-flavored Markdown.
 to be stable until it reaches version 1.0. Use integration tests to avoid
 surprises.
 
+```ruby
+require 'markdpwn'
+code = "puts {:key => nil}.inspect\n"
+Markdpwn.markup code, :file_name => 'code.rb', :mime_type => 'text/x-ruby'
+```
+
+The `markup` call above outputs the HTML code below.
+
+```html
+<div class="markdpwn-parsed-code">
+<span class="nb">puts</span> <span class="p">{</span><span class="ss">:key</span> <span class="o">=&gt;</span> <span class="kp">nil</span><span class="p">}</span><span class="o">.</span><span class="n">inspect</span>
+</div>
+```
+
+You can pass `:file_name` and/or `:mime_type` to help `markup` figure out
+which formatter to use. If no option is present, pygments is asked to guess the
+text document's language.
+
+If you know the contents is _markdpwn_ (close to Github-Flavored Markup), use
+the `markdpwn` method directly.
+
+```ruby
+require 'markdpwn'
+comment = "I like what you did to `markdpwn`." 
+Markdpwn.markdpwn comment
+# => "<p>I like what you did to <code>markdpwn</code>.</p>\n"
+```
 
 ## Dependencies
 

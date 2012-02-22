@@ -32,7 +32,7 @@ describe Markdpwn::Docs do
     describe 'with view.html.erb' do
       let :result do
         Markdpwn::Docs.gh_markup code_fixture('view.html.erb'),
-            :file_name => 'view.html.erb' 
+                                 :file_name => 'view.html.erb' 
       end
       
       it 'is nil' do
