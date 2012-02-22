@@ -18,9 +18,9 @@ module Code
   # @return [String] a HTML fragment containing the formatted code
   def self.render(code, options = {})
     [
-      %Q|<div class="markdpwn-parsed-code">\n|,
+      %Q|<div class="markdpwn-parsed-code">|,
       pygment(code, options),
-      "\n</div>"
+      "</div>"
     ].join ''
   end
   
