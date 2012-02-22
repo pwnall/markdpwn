@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Victor Costan"]
   s.date = "2012-02-22"
-  s.description = "TODO: longer description of your gem"
+  s.description = "HTML-formats text documents such as Markdown, textile, and source code"
   s.email = "victor@costan.us"
   s.extra_rdoc_files = [
     "LICENSE.txt",
@@ -31,6 +31,7 @@ Gem::Specification.new do |s|
     "lib/markdpwn/dpwn.rb",
     "lib/markdpwn/glue.rb",
     "lib/markdpwn/red_carpet_renderer.rb",
+    "markdpwn.gemspec",
     "test/fixtures/readme.asciidoc",
     "test/fixtures/readme.md",
     "test/fixtures/readme.pod",
