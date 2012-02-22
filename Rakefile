@@ -18,7 +18,7 @@ Jeweler::Tasks.new do |gem|
   gem.homepage = "http://github.com/pwnall/markdpwn"
   gem.license = "MIT"
   gem.summary = %Q{HTML-formats text documents such as Markdown, textile, and source code}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.description = %Q{HTML-formats text documents such as Markdown, textile, and source code}
   gem.email = "victor@costan.us"
   gem.authors = ["Victor Costan"]
   # dependencies defined in Gemfile
