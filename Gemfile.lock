@@ -16,8 +16,7 @@ GEM
       rdoc
     json (1.6.5)
     minitest (2.11.2)
-    org-ruby (0.6.0)
-      rubypants (>= 0.2.0)
+    multi_json (1.0.4)
     pygments.rb (0.2.4)
       rubypython (~> 0.5.3)
     rake (0.9.2.2)
@@ -25,13 +24,13 @@ GEM
     rdoc (3.12)
       json (~> 1.4)
     redcarpet (2.1.0)
-    rubypants (0.2.0)
     rubypython (0.5.3)
       blankslate (>= 2.1.2.3)
       ffi (~> 1.0.7)
-    simplecov (0.4.2)
-      simplecov-html (~> 0.4.4)
-    simplecov-html (0.4.5)
+    simplecov (0.5.4)
+      multi_json (~> 1.0.3)
+      simplecov-html (~> 0.5.3)
+    simplecov-html (0.5.3)
     wikicloth (0.7.1)
       builder
       expression_parser
@@ -47,7 +46,6 @@ DEPENDENCIES
   github-markup (>= 0.7.1)
   jeweler (>= 1.8.3)
   minitest (>= 2.11)
-  org-ruby (>= 0.6.0)
   pygments.rb (>= 0.2.4)
   rcov
   rdoc (>= 3.12)

@@ -8,7 +8,8 @@ gem 'github-markup', '>= 0.7.1', :require => 'github/markup'
 gem 'redcarpet', '>= 2.1.0'
 gem 'RedCloth', '>= 4.2.9'
 gem 'rdoc', '>= 3.12'
-gem 'org-ruby', '>= 0.6.0', :platform => :mri_18
+# TODO(pwnall): add org-ruby back in when they make a relese with the UTF-8 fix
+# gem 'org-ruby', '>= 0.6.1'
 gem 'creole', '>= 0.4.2'
 gem 'wikicloth', '>= 0.7.1'
 
