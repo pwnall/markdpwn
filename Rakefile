@@ -14,8 +14,8 @@ require 'rake'
 require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
-  gem.name = "markdpwn_rails"
-  gem.homepage = "http://github.com/pwnall/markdpwn_rails"
+  gem.name = "markdpwn"
+  gem.homepage = "http://github.com/pwnall/markdpwn"
   gem.license = "MIT"
   gem.summary = %Q{HTML-formats text documents such as Markdown, textile, and source code}
   gem.description = %Q{TODO: longer description of your gem}

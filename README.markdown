@@ -1,4 +1,4 @@
-# markdpwn_rails
+# markdpwn
 
 Rails engine providing a clone of Git-flavored Markdown.
 
@@ -21,7 +21,7 @@ sudo yum install -y python-devel
 
 
 
-## Contributing to markdpwn_rails
+## Contributing to markdpwn
  
 * Check out the latest master to make sure the feature hasn't been implemented
   or the bug hasn't been fixed yet.

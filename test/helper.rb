@@ -12,7 +12,7 @@ require 'minitest/spec'
 
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
-require 'markdpwn_rails'
+require 'markdpwn'
 
 class MiniTest::Unit::TestCase
   # The contents at test/fixtures/name.
