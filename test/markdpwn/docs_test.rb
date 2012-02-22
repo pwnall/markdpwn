@@ -2,7 +2,9 @@ require File.expand_path('../helper', File.dirname(__FILE__))
 
 describe Markdpwn::Docs do
   describe "#render return value" do
-    ['.asciidoc', '.pod', '.rdoc', '.rst', '.textile', '.wiki'].each do |ext|
+    [
+      '.asciidoc', '.md', '.pod', '.rdoc', '.rst', '.textile', '.wiki'
+    ].each do |ext|
       describe "with a #{ext} document" do
         let :result do
           Markdpwn::Docs.gh_markup code_fixture("readme#{ext}"),

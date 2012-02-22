@@ -11,9 +11,8 @@ module Dpwn
   #
   # @param [String] text the text to be formatted using Markdpwn
   # @return [String] a HTML fragment containing the formatted text
-  def self.markup(text)
-    renderer = CodeRenderer.new :filter_html => true,
-        :no_styles => true, :safe_links_only => true 
+  def self.render(text)
+    renderer = Markdpwn::RedCarpetRenderer.new 
     md = Redcarpet::Markdown.new renderer,
       :autolink => true,
       :no_intra_emphasis => true,
@@ -21,7 +20,7 @@ module Dpwn
       :fenced_code_blocks => true,
       :strikethrough => true,
       :space_after_headers => true
-    md.render(blob.data).html_safe
+    md.render text
   end
   
   # Checks if some file should be formatted using Markdpwn.

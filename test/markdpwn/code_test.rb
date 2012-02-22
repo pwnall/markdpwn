@@ -29,6 +29,10 @@ describe Markdpwn::Code do
       it 'includes a parsed <h1> tag' do
         result.must_match '<span class="nt">&lt;h1&gt;</span>'
       end
+      
+      it 'includes a parsed :partial symbol' do
+        result.must_match '<span class="ss">:partial</span>'
+      end
     end
   end
   
