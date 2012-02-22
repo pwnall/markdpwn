@@ -14,8 +14,7 @@ class RedCarpetRenderer < Redcarpet::Render::HTML
   end
   
   def block_code(code, language)
-    code_html = Markdpwn::Code.pygment code, :language => language
-    [%Q|<pre class="markdpwn-highlight">\n|, code_html, "\n</pre>"].join ''
+    Markdpwn::Code.render code, :language => language
   end
 end  # class MarkdDpwn::RedCarpetRenderer
 

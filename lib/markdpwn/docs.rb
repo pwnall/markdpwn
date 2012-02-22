@@ -10,7 +10,7 @@ module Markdpwn
 
 # Document (e.g. textile, markdown) formatting.
 module Docs
-  # The raw GitHub::Markup output for parsing some code.
+  # The raw GitHub::Markup output for parsing a text document.
   #
   # @option options [String] :mime_type the MIME type of the code file; e-mail
   #     attachments and git blobs have MIME types

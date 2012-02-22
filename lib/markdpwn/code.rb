@@ -4,7 +4,7 @@ module Markdpwn
 
 # Code formatting.
 module Code
-  # The raw Pygments output for parsing some code.
+  # Marks up code.
   #
   # @param [String] code the code to be formatted
   # @param [Hash] options code properties that help choose the formatter
@@ -16,6 +16,16 @@ module Code
   #     piece of code; meaningful for files in version control repositories,
   #     e-mail attachments, and code fetched from links
   # @return [String] a HTML fragment containing the formatted code
+  def self.render(code, options = {})
+    [
+      %Q|<div class="markdpwn-parsed-code">\n|,
+      pygment(code, options),
+      "\n</div>"
+    ].join ''
+  end
+  
+  # The raw Pygments output for parsing some code.
+  #
   def self.pygment(code, options = {})
     lexer = pygments_lexer options
     Pygments.highlight code, :lexer => lexer, :formatter => 'html',
@@ -27,7 +37,7 @@ module Code
   # @param [Hash] options code properties that help choose the formatter
   # @option options [String] :code the code to be parsed, or a sample of the
   #     code; if code is provided, a language will always be returned
-  # @see Markdpwn::Code#pygments for other available options
+  # @see Markdpwn::Code#render for other available options
   # @return [String] the name of a Pygments lexer that can parse the code
   def self.pygments_lexer(options = {})
     if language = options[:language]

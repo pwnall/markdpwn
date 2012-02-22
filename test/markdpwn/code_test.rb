@@ -1,6 +1,27 @@
 require File.expand_path('../helper', File.dirname(__FILE__))
 
 describe Markdpwn::Code do
+  describe '#render return value' do
+    describe 'with view.html.erb' do
+      let :result do
+        Markdpwn::Code.render code_fixture('view.html.erb'),
+            :file_name => 'view.html.erb'
+      end
+      
+      it 'is wrapped in a <div> with the markdpwn-parsed-code class' do
+        result.must_match /\A<div class="markdpwn-parsed-code">.*<\/div>\Z/m
+      end
+      
+      it 'includes a parsed <h1> tag' do
+        result.must_match '<span class="nt">&lt;h1&gt;</span>'
+      end
+      
+      it 'includes a parsed :partial symbol' do
+        result.must_match '<span class="ss">:partial</span>'
+      end
+    end
+  end
+  
   describe '#pygment return value' do
     describe 'with ruby code' do
       let :result do
