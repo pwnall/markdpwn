@@ -1,15 +1,14 @@
 source :rubygems
 
 # Code formatting.
-gem 'pygments.rb', '>= 0.2.4'
+gem 'pygments.rb', '>= 0.2.11'
 
 # Github formatting.
-gem 'github-markup', '>= 0.7.1', :require => 'github/markup'
-gem 'redcarpet', '>= 2.1.0'
+gem 'github-markup', '>= 0.7.2', :require => 'github/markup'
+gem 'redcarpet', '>= 2.1.1'
 gem 'RedCloth', '>= 4.2.9'
 gem 'rdoc', '>= 3.12'
-# TODO(pwnall): add org-ruby back in when they make a relese with the UTF-8 fix
-# gem 'org-ruby', '>= 0.6.1'
+gem 'org-ruby', '>= 0.6.2'
 gem 'creole', '>= 0.4.2'
 gem 'wikicloth', '>= 0.7.1'
 

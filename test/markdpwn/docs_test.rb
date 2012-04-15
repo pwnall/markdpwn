@@ -3,7 +3,7 @@ require File.expand_path('../helper', File.dirname(__FILE__))
 describe Markdpwn::Docs do
   describe "#render return value" do
     [
-      '.asciidoc', '.md', '.pod', '.rdoc', '.rst', '.textile', '.wiki'
+      '.asciidoc', '.md', '.org', '.pod', '.rdoc', '.rst', '.textile', '.wiki'
     ].each do |ext|
       describe "with a #{ext} document" do
         let :result do
