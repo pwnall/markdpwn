@@ -45,7 +45,7 @@ module Code
     if language = options[:language]
       lexer = begin
         Pygments.lexer_name_for :lexer => language
-      rescue RubyPython::PythonError
+      rescue IOError
         nil
       end
       return lexer if lexer
@@ -54,7 +54,7 @@ module Code
     if mime_type = options[:mime_type]
       lexer = begin
         Pygments.lexer_name_for :mimetype => mime_type
-      rescue RubyPython::PythonError
+      rescue IOError
         nil
       end
       return lexer if lexer
@@ -63,7 +63,7 @@ module Code
     if file_name = options[:file_name]
       lexer = begin
         Pygments.lexer_name_for :filename => file_name
-      rescue RubyPython::PythonError
+      rescue IOError
         nil
       end
       return lexer if lexer
@@ -72,7 +72,7 @@ module Code
     if code = options[:code]
       lexer = begin
         Pygments.lexer_name_for code
-      rescue RubyPython::PythonError
+      rescue IOError
         nil
       end
       return lexer if lexer
