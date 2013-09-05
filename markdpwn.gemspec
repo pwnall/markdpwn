@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "markdpwn"
-  s.version = "0.1.6"
+  s.version = "0.1.7"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Victor Costan"]
-  s.date = "2013-04-27"
+  s.date = "2013-09-05"
   s.description = "HTML-formats text documents such as Markdown, textile, and source code"
   s.email = "victor@costan.us"
   s.extra_rdoc_files = [
@@ -57,49 +57,49 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<pygments.rb>, [">= 0.5.0"])
+      s.add_runtime_dependency(%q<pygments.rb>, [">= 0.5.2"])
       s.add_runtime_dependency(%q<github-markup>, [">= 0.7.5"])
-      s.add_runtime_dependency(%q<redcarpet>, [">= 2.2.2"])
+      s.add_runtime_dependency(%q<redcarpet>, [">= 3.0.0"])
       s.add_runtime_dependency(%q<RedCloth>, [">= 4.2.9"])
-      s.add_runtime_dependency(%q<rdoc>, ["~> 3.4"])
+      s.add_runtime_dependency(%q<rdoc>, ["~> 3.12"])
       s.add_runtime_dependency(%q<org-ruby>, [">= 0.8.1"])
       s.add_runtime_dependency(%q<creole>, [">= 0.5.0"])
       s.add_runtime_dependency(%q<wikicloth>, [">= 0.8.0"])
       s.add_development_dependency(%q<minitest>, [">= 4.7.3"])
-      s.add_development_dependency(%q<yard>, [">= 0.8.6.1"])
+      s.add_development_dependency(%q<yard>, [">= 0.8.7"])
       s.add_development_dependency(%q<bundler>, [">= 1.3.5"])
-      s.add_development_dependency(%q<jeweler>, [">= 1.8.4"])
+      s.add_development_dependency(%q<jeweler>, [">= 1.8.7"])
       s.add_development_dependency(%q<rcov>, [">= 0"])
       s.add_development_dependency(%q<simplecov>, [">= 0"])
     else
-      s.add_dependency(%q<pygments.rb>, [">= 0.5.0"])
+      s.add_dependency(%q<pygments.rb>, [">= 0.5.2"])
       s.add_dependency(%q<github-markup>, [">= 0.7.5"])
-      s.add_dependency(%q<redcarpet>, [">= 2.2.2"])
+      s.add_dependency(%q<redcarpet>, [">= 3.0.0"])
       s.add_dependency(%q<RedCloth>, [">= 4.2.9"])
-      s.add_dependency(%q<rdoc>, ["~> 3.4"])
+      s.add_dependency(%q<rdoc>, ["~> 3.12"])
       s.add_dependency(%q<org-ruby>, [">= 0.8.1"])
       s.add_dependency(%q<creole>, [">= 0.5.0"])
       s.add_dependency(%q<wikicloth>, [">= 0.8.0"])
       s.add_dependency(%q<minitest>, [">= 4.7.3"])
-      s.add_dependency(%q<yard>, [">= 0.8.6.1"])
+      s.add_dependency(%q<yard>, [">= 0.8.7"])
       s.add_dependency(%q<bundler>, [">= 1.3.5"])
-      s.add_dependency(%q<jeweler>, [">= 1.8.4"])
+      s.add_dependency(%q<jeweler>, [">= 1.8.7"])
       s.add_dependency(%q<rcov>, [">= 0"])
       s.add_dependency(%q<simplecov>, [">= 0"])
     end
   else
-    s.add_dependency(%q<pygments.rb>, [">= 0.5.0"])
+    s.add_dependency(%q<pygments.rb>, [">= 0.5.2"])
     s.add_dependency(%q<github-markup>, [">= 0.7.5"])
-    s.add_dependency(%q<redcarpet>, [">= 2.2.2"])
+    s.add_dependency(%q<redcarpet>, [">= 3.0.0"])
     s.add_dependency(%q<RedCloth>, [">= 4.2.9"])
-    s.add_dependency(%q<rdoc>, ["~> 3.4"])
+    s.add_dependency(%q<rdoc>, ["~> 3.12"])
     s.add_dependency(%q<org-ruby>, [">= 0.8.1"])
     s.add_dependency(%q<creole>, [">= 0.5.0"])
     s.add_dependency(%q<wikicloth>, [">= 0.8.0"])
     s.add_dependency(%q<minitest>, [">= 4.7.3"])
-    s.add_dependency(%q<yard>, [">= 0.8.6.1"])
+    s.add_dependency(%q<yard>, [">= 0.8.7"])
     s.add_dependency(%q<bundler>, [">= 1.3.5"])
-    s.add_dependency(%q<jeweler>, [">= 1.8.4"])
+    s.add_dependency(%q<jeweler>, [">= 1.8.7"])
     s.add_dependency(%q<rcov>, [">= 0"])
     s.add_dependency(%q<simplecov>, [">= 0"])
   end
