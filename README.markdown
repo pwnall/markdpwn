@@ -32,7 +32,7 @@ the `markdpwn` method directly.
 
 ```ruby
 require 'markdpwn'
-comment = "I like what you did to `markdpwn`." 
+comment = "I like what you did to `markdpwn`."
 Markdpwn.markdpwn comment
 # => "<p>I like what you did to <code>markdpwn</code>.</p>\n"
 ```
@@ -46,27 +46,23 @@ them on Fedora.
 
 ```bash
 sudo yum install -y python-devel python-pygments
-``` 
+```
 
-The `github-markup` gem requires `asciidoc`, PERL together with the
-`Pod::Simple` library, and Python together with the `rst2html` tool. The
-following command installs them on Fedora. 
+The `github-markup` gem requires PERL together with the `Pod::Simple` library,
+and Python together with the `rst2html` tool. The following command installs
+them on Fedora.
 
 ```bash
-sudo yum install -y asciidoc perl-Pod-Simple python-docutils
+sudo yum install -y perl-Pod-Simple python-docutils
 ```
 
 on OSX, follow the instructions
 [here](http://docutils.sourceforge.net/README.html#gnu-linux-bsds-unix-mac-os-x-etc)
-to install the `rst2html` tool, and run the command below for `asciidoc`.
-
-```bash
-brew install asciidoc
-```
+to install the `rst2html` tool.
 
 
 ## Contributing to markdpwn
- 
+
 * Check out the latest master to make sure the feature hasn't been implemented
   or the bug hasn't been fixed yet.
 * Check out the issue tracker to make sure someone already hasn't requested it
