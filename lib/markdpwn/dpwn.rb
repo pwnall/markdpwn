@@ -13,19 +13,19 @@ module Dpwn
   # @param [Hash] options rendering options (currently ignored)
   # @return [String] a HTML fragment containing the formatted text
   def self.render(text, options = {})
-    renderer = Markdpwn::RedCarpetRenderer.new 
+    renderer = Markdpwn::RedCarpetRenderer.new
     md = Redcarpet::Markdown.new renderer,
-      :autolink => true,
-      :no_intra_emphasis => true,
-      :tables => true,
-      :fenced_code_blocks => true,
-      :strikethrough => true,
-      :space_after_headers => true
+        autolink: true,
+        no_intra_emphasis: true,
+        tables: true,
+        fenced_code_blocks: true,
+        strikethrough: true,
+        space_after_headers: true
     md.render text
   end
-  
+
   # Checks if some file should be formatted using Markdpwn.
-  # @param [Hash] options file properties considered in the decision process  
+  # @param [Hash] options file properties considered in the decision process
   # @option options [String] :mime_type the MIME type of the code file; e-mail
   #     attachments and git blobs have MIME types
   # @option options [String] :file_name the name of the file containing the

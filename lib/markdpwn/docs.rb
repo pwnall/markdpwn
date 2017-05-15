@@ -21,10 +21,10 @@ module Docs
   # @return [String] the GitHub::Markup output, or nil if the file cannot be
   #     rendered by GitHub::Markup
   def self.gh_markup(text, options = {})
-    # NOTE: the MIME type is specified in the API so clients won't need to 
+    # NOTE: the MIME type is specified in the API so clients won't need to
     #       change if/when MIME-based detection is added
     file_name = options[:file_name]
-    if file_name && GitHub::Markup.can_render?(file_name)
+    if file_name && GitHub::Markup.can_render?(file_name, text)
       GitHub::Markup.render file_name, text
     else
       nil

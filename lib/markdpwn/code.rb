@@ -28,8 +28,8 @@ module Code
   #
   def self.pygment(code, options = {})
     lexer = pygments_lexer options
-    pygments_args = { :formatter => 'html',
-        :options => { :encoding => 'utf-8', :nowrap => true } }
+    pygments_args = { formatter: 'html',
+        options: { encoding: 'utf-8', nowrap: true } }
     pygments_args[:lexer] = lexer if lexer
     Pygments.highlight code, pygments_args
   end
@@ -44,7 +44,7 @@ module Code
   def self.pygments_lexer(options = {})
     if language = options[:language]
       lexer = begin
-        Pygments.lexer_name_for :lexer => language
+        Pygments.lexer_name_for lexer: language
       rescue IOError
         nil
       end
@@ -53,7 +53,7 @@ module Code
 
     if mime_type = options[:mime_type]
       lexer = begin
-        Pygments.lexer_name_for :mimetype => mime_type
+        Pygments.lexer_name_for mimetype: mime_type
       rescue IOError
         nil
       end
@@ -62,7 +62,7 @@ module Code
 
     if file_name = options[:file_name]
       lexer = begin
-        Pygments.lexer_name_for :filename => file_name
+        Pygments.lexer_name_for filename: file_name
       rescue IOError
         nil
       end

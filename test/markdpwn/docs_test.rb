@@ -10,33 +10,33 @@ describe Markdpwn::Docs do
           Markdpwn::Docs.gh_markup code_fixture("readme#{ext}"),
               :file_name => "readme#{ext}"
         end
-        
+
         it 'includes a heading' do
-          result.must_match /<h2[^>]*>.*List.*<\/h2>/m
+          result.must_match(/<h2[^>]*>.*List.*<\/h2>/m)
         end
-        
+
         it 'includes a list item' do
-          result.must_match /<li>.*Eggs.*<\/li>/m
+          result.must_match(/<li>.*Eggs.*<\/li>/m)
         end
-        
+
         it 'is not wrapped in a <div>' do
-          result.wont_match '<pre'
+          result.wont_match '<div'
         end
-  
+
         it 'does not contain a <pre>' do
           result.wont_match '<pre'
         end
       end
-    end      
-    
+    end
+
     describe 'with view.html.erb' do
       let :result do
         Markdpwn::Docs.gh_markup code_fixture('view.html.erb'),
-                                 :file_name => 'view.html.erb' 
+                                 :file_name => 'view.html.erb'
       end
-      
+
       it 'is nil' do
-        result.must_equal nil
+        result.must_be_nil
       end
     end
   end

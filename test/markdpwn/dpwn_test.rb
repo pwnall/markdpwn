@@ -6,15 +6,15 @@ describe Markdpwn::Dpwn do
       let :result do
         Markdpwn::Dpwn.render code_fixture("readme.md")
       end
-      
+
       it 'includes a heading' do
-        result.must_match /<h2[^>]*>.*List.*<\/h2>/m
+        result.must_match(/<h2[^>]*>.*List.*<\/h2>/m)
       end
-      
+
       it 'includes a list item' do
-        result.must_match /<li>.*Eggs.*<\/li>/m
+        result.must_match(/<li>.*Eggs.*<\/li>/m)
       end
-      
+
       it 'includes a parsed symbol' do
         result.must_match '<span class="ss">:symbol</span>'
       end
